@@ -19,16 +19,20 @@ const StyledArticle = styled("main", {
 
 const ArticleDetailViewPage = () => {
   const { id } = useRouter().query;
-  const article = articleList[`${id}`];
-
-  return (
-    <StyledArticle>
-      <HeroBlock title={article.title} bgImage={article.coverImage} />
-      <article className="content">
-        <p>{article.content}</p>
-      </article>
-    </StyledArticle>
+  const article = Object.values(articleList).find(
+    (article) => article.id === parseInt(id?.toString() || "", 10)
   );
+
+  if (id && article && article.id)
+    return (
+      <StyledArticle>
+        <HeroBlock title={article.title} bgImage={article.coverImage} />
+        <article className="content">
+          <p>{article.content}</p>
+        </article>
+      </StyledArticle>
+    );
+  return <h1>Article Not Found....</h1>;
 };
 
 export default ArticleDetailViewPage;
