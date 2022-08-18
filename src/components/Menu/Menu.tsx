@@ -10,6 +10,11 @@ const StyledMenu = styled("nav", {
   display: "flex",
   justifyContent: "space-between",
   zIndex: Zindex.MainMenu,
+  "@media screen and (max-width: 992px)": {
+    ul: {
+      flexDirection: "column",
+    },
+  },
   ul: {
     display: "flex",
     columnGap: 32,
