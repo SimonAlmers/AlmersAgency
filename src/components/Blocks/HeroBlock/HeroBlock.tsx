@@ -36,7 +36,7 @@ const HeroBlock = ({
   title = "Hero Block",
   bgImage,
 }: {
-  title: string;
+  title?: string;
   bgImage?: string;
 }) => {
   return (
