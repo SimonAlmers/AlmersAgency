@@ -11,7 +11,7 @@ const useInfititeScroll = ({
 }) => {
   const observer = useRef<IntersectionObserver>();
   const lastItemRef = useCallback(
-    (node: Element) => {
+    (node: HTMLDivElement) => {
       if (isLoading) return;
       if (observer.current) observer.current.disconnect();
       observer.current = new IntersectionObserver((entries) => {
