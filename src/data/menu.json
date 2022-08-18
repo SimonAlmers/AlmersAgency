@@ -1,0 +1,8 @@
+[
+  { "title": "Articles", "link": "/articles" },
+  { "title": "Events", "link": "/events" },
+  { "title": "Components", "link": "/components" },
+  { "title": "Our Work", "link": "/work" },
+  { "title": "Inspiration", "link": "/inspiration" },
+  { "title": "Testimonials", "link": "/testimonials" }
+]
