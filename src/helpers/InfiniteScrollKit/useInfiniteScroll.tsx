@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef } from "react";
 
 const useInfititeScroll = ({
   fetchNext,
@@ -11,17 +11,17 @@ const useInfititeScroll = ({
 }) => {
   const observer = useRef<IntersectionObserver>();
   const lastItemRef = useCallback(
-    node => {
+    (node: Element) => {
       if (isLoading) return;
       if (observer.current) observer.current.disconnect();
-      observer.current = new IntersectionObserver(entries => {
+      observer.current = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
           if (hasMore) fetchNext();
         }
       });
       if (node) observer.current.observe(node);
     },
-    [isLoading, hasMore],
+    [isLoading, hasMore]
   );
 
   return lastItemRef;

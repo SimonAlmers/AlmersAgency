@@ -1,9 +1,12 @@
 import MenuLink from "./Menu.Link";
-import MenuLinks from "../../data/menu.json";
+import MenuLinks from "data/menu.json";
+import { styled } from "@stitches/react";
+
+const StyledMenu = styled("nav", {});
 
 const Menu = () => {
   return (
-    <nav>
+    <StyledMenu>
       <img src="/img/logo.svg" alt="" />
       <ul>
         {MenuLinks.map((link) => (
@@ -12,7 +15,7 @@ const Menu = () => {
           </li>
         ))}
       </ul>
-    </nav>
+    </StyledMenu>
   );
 };
 
