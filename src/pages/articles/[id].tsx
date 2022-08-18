@@ -13,7 +13,7 @@ const StyledArticle = styled("main", {
     maxWidth: 800,
     fontSize: "1.5rem",
     lineHeight: "2.5rem",
-    fontFamily: "serif",
+    fontFamily: "Andada Pro",
   },
 });
 

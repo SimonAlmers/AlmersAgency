@@ -10,13 +10,15 @@ const StyledBlock = styled("section", {
   justifyContent: "center",
   alignItems: "center",
   zIndex: 0,
+  "&:hover": {
+    h1: {
+      textShadow: "0px 0px 0px lime",
+    },
+  },
   h1: {
     fontSize: "8rem",
     transition: "all 400ms",
-    textShadow: "10px 10px 0px lime",
-    "&:hover": {
-      textShadow: "0px 0px 0px lime",
-    },
+    textShadow: "5px 5px 0px rgb(0,200,200),-5px -5px 0px rgb(255,0,127)",
   },
   ".bgImage": {
     backgroundSize: "cover",
